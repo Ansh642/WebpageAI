@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google/generative-ai": "^0.24.0",
     "axios": "^1.9.0",
-    "cheerio": "^1.0.0"
+    "cheerio": "^1.0.0",
+    "chromadb": "^2.3.0",
+    "dotenv": "^16.5.0"
   }
 }
