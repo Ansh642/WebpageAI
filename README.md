@@ -1,56 +1,80 @@
+Here’s your **README** file for the **AI Agentic Web Support App** in the same format:
 
-```markdown
-# Web Scraping AI Agent
+---
 
-An AI-powered tool that extracts website content and answers questions about it.
+# 🕸️ AI Agentic Web Support App
 
-## Features
+An intelligent support assistant that scrapes website content, generates semantic embeddings using Google Gemini, and stores them in a vector database (ChromaDB) for meaningful question answering — just like a smart chatbot for websites.
 
-- Scrapes and cleans website content
-- Stores information with semantic search capabilities
-- Answers questions in natural language
+---
 
-## Setup
+## 🚀 Features
 
-1. Install dependencies:
+* Structured web scraping (headings, paragraphs, metadata)
+* Gemini 1.5 & Embedding-001 integration for vector generation
+* Semantic search using ChromaDB
+* Context-aware AI answers to user queries
+* CLI-based chat interface
+* Fully agentic behavior with web content ingestion → vectorization → QA
+
+---
+
+## 🛠 Tech Stack
+
+* Node.js
+* Axios + Cheerio (for web scraping)
+* Google Generative AI (Gemini)
+* ChromaDB (self-hosted)
+* dotenv
+* pnpm
+
+---
+
+## 📦 Setup
+
+1. Clone the repo & install dependencies:
+
 ```bash
 git clone https://github.com/Ansh642/WebpageAI.git
-cd webpage-ai
+cd ai-agentic-web-support
 npm install
 ```
 
-2. Create `.env` file:
+2. Create a `.env` file:
+
 ```env
-GOOGLE_API_KEY=your_key_here
+GOOGLE_API_KEY=your_google_api_key
 ```
 
-3. Run the code
+3. Start ChromaDB locally:
+
+```bash
+docker run -d -p 8000:8000 ghcr.io/chroma-core/chroma:latest
+```
+
+4. Run the app:
+
 ```bash
 node index.js
 ```
 
+---
 
+## 💬 Example Interaction
 
-## Usage
+```bash
+>> What is Universal Agent about in atomic work?
 
-```javascript
-// Scrape a website
-await ingest('https://example.com');
-
-// Ask questions
-await chat("What does this company do?");
+✅ AI Response:
+The Universal Agent by Atomicwork is designed to...
 ```
 
-## Tech Stack
+---
 
-- Google Gemini AI
-- ChromaDB
-- Cheerio + Axios
-```
+## 👤 Author
 
-This version:
-- Uses minimal headings
-- Keeps code blocks simple
-- Focuses on core functionality
-- Maintains clean spacing
-- Removes unnecessary details
+**Ansh Agarwal**
+📧 [anshagarwal642@gmail.com](mailto:anshagarwal642@gmail.com)
+🔗 [GitHub](https://github.com/Ansh642) | [LinkedIn](https://www.linkedin.com/in/ansh-agarwal-b830b3218)
+
+---
